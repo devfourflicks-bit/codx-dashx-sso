@@ -1,0 +1,6 @@
+{
+  "name": "Stonex Admin Dashboard",
+  "description": "A professional and elegant administrative dashboard for managing Stonex website content, products, theme configurations, and chatbot leads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

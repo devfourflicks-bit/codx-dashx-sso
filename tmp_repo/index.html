@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stonex Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css?v=3" />
+</head>
+<body>
+
+  <!-- Login Overlay -->
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-box">
+      <h2>Admin Login</h2>
+      <p>Sign in to manage Stonex content.</p>
+      <form id="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+        <button type="submit">Sign In</button>
+        <div id="login-error" class="error-msg"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Dashboard -->
+  <div id="dashboard" class="dashboard hidden">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand" style="text-align:center; padding:10px 0;">
+        <img id="admin-sidebar-logo" src="" alt="Admin Logo" style="max-height: 40px; display: none; margin: 0 auto 10px auto;" />
+        <h2 id="admin-sidebar-title">Stonex Admin</h2>
+      </div>
+      <nav class="nav-menu">
+        <button class="nav-btn active" data-target="overview-section"><span class="icon">⊞</span> Overview</button>
+        <button class="nav-btn" data-target="theme-section"><span class="icon">⚙️</span> Theme & Settings</button>
+        <button class="nav-btn" data-target="company-info-section"><span class="icon">🏢</span> About Stonex</button>
+        <button class="nav-btn" data-target="hero-section"><span class="icon">🖼️</span> Hero Content</button>
+        <button class="nav-btn" data-target="services-section"><span class="icon">📦</span> What We Offer</button>
+        <button class="nav-btn" data-target="products-section"><span class="icon">🛒</span> Our Product Range</button>
+        <button class="nav-btn" data-target="why-choose-section"><span class="icon">⭐</span> Why Choose Stonex</button>
+        <button class="nav-btn" data-target="process-section"><span class="icon">🔄</span> How It Works</button>
+        <button class="nav-btn" data-target="contact-section"><span class="icon">📞</span> Contact Details</button>
+        <button class="nav-btn" data-target="announcements-section"><span class="icon">📢</span> Announcements</button>
+        <button class="nav-btn" data-target="leads-section"><span class="icon">💬</span> Chat Leads</button>
+      </nav>
+      <div style="margin-top:auto; padding:20px;">
+        <span id="user-email"></span>
+        <button id="logout-btn" class="logout-btn">Log Out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+            <header class="top-header">
+        <div class="search-bar">
+          <span style="opacity:0.5;">🔍</span>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="header-right">
+          <div id="save-status" class="save-status">All changes saved.</div>
+          <a href="/" target="_blank" class="btn-live">View Live Site ↗</a>
+          <div class="profile-pill">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=f0edff&color=7854f7" class="avatar" />
+            <span id="user-email-display">Admin</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="content-sections">
+        <!-- OVERVIEW PANEL -->
+        <section id="overview-section" class="admin-section">
+          <div class="overview-layout">
+            <div class="overview-main">
+              <div class="purple-banner">
+                <div class="banner-content">
+                  <h3>STONEX DASHBOARD</h3>
+                  <h2>Sharpen Your Skills with Professional Online Courses</h2>
+                  <p>Wait, this is Stonex! Manage your premium quality stones easily.</p>
+                  <button class="btn-dark">Manage Leads ↗</button>
+                </div>
+                <div class="banner-decor">✨</div>
+              </div>
+              
+              <div class="stat-cards-row">
+                <div class="stat-card">
+                  <div class="stat-icon" style="background:#E2F3FC; color:#2398D8;">📈</div>
+                  <div>
+                    <div class="stat-title">Total Views</div>
+                    <div class="stat-value">2,405</div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon" style="background:#FDECEE; color:#E34D5F;">💎</div>
+                  <div>
+                    <div class="stat-title">Products</div>
+                    <div class="stat-value">12</div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon" style="background:#EEF8F1; color:#35A760;">💬</div>
+                  <div>
+                    <div class="stat-title">Chat Leads</div>
+                    <div id="stat-leads-count" class="stat-value">0</div>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="section-heading">Quick Actions</h3>
+              <div class="quick-actions-row">
+                <div class="qa-card" onclick="document.querySelector('[data-target=theme-section]').click()">
+                  <div class="qa-img theme-bg"></div>
+                  <div class="qa-text">Edit Theme</div>
+                </div>
+                <div class="qa-card" onclick="document.querySelector('[data-target=hero-section]').click()">
+                  <div class="qa-img hero-bg"></div>
+                  <div class="qa-text">Update Hero</div>
+                </div>
+                <div class="qa-card" onclick="document.querySelector('[data-target=products-section]').click()">
+                  <div class="qa-img prod-bg"></div>
+                  <div class="qa-text">Add Product</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="overview-sidebar">
+              <div class="profile-card">
+                <div class="pc-cover"></div>
+                <img src="https://ui-avatars.com/api/?name=Admin&background=7854f7&color=fff" class="pc-avatar" />
+                <h4>Good Morning Admin 🔥</h4>
+                <p>Continue managing your Stonex site to achieve your target!</p>
+              </div>
+              
+              <div class="chart-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <h4 style="margin:0;">Statistic</h4>
+                  <span style="color:var(--text-muted);">⋮</span>
+                </div>
+                <div class="fake-chart">
+                  <div class="bar-col"><div class="bar h-20"></div><span>1-10</span></div>
+                  <div class="bar-col"><div class="bar h-40"></div><span>11-20</span></div>
+                  <div class="bar-col"><div class="bar h-80"></div><span>21-30</span></div>
+                  <div class="bar-col"><div class="bar h-30"></div><span>31-10</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+        <!-- Theme & Settings Section -->
+        <section id="theme-section" class="admin-section active">
+          <h2>Theme & General Settings</h2>
+          <form id="theme-form" class="admin-form">
+            <div class="form-group">
+              <label for="theme-primary">Primary Color</label>
+              <input type="color" id="theme-primary" />
+            </div>
+            <div class="form-group">
+              <label for="theme-accent">Accent Color</label>
+              <input type="color" id="theme-accent" />
+            </div>
+            <div class="form-group full-width">
+              <label for="theme-header-type">Header Background Type</label>
+              <select id="theme-header-type" onchange="document.getElementById('header-gradient-group').style.display = this.value === 'gradient' ? 'block' : 'none'; document.getElementById('header-solid-group').style.display = this.value === 'solid' ? 'block' : 'none';">
+                <option value="gradient">Gradient</option>
+                <option value="solid">Solid Color</option>
+              </select>
+            </div>
+            <div class="form-group full-width" id="header-gradient-group">
+              <label for="theme-headerbg">Header Background Gradient</label>
+              <input type="text" id="theme-headerbg" value="linear-gradient(135deg, var(--color-primary), var(--color-accent))" />
+            </div>
+            <div class="form-group full-width" id="header-solid-group" style="display: none;">
+              <label for="theme-header-color">Header Solid Color</label>
+              <input type="color" id="theme-header-color" value="#2a6cd6" />
+            </div>
+            <div class="form-group">
+              <label for="theme-font">Font Family</label>
+              <select id="theme-font">
+                <option value="Inter">Inter</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Open Sans">Open Sans</option>
+                <option value="Montserrat">Montserrat</option>
+              </select>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="theme-logo">Upload Custom Logo (Optional)</label>
+              <input type="file" id="theme-logo" accept="image/png, image/jpeg, image/svg+xml" />
+              <img id="theme-logo-preview" style="max-width: 150px; display: none; margin-top: 10px; border-radius: 4px; border: 1px solid var(--border);" />
+            </div>
+
+            <div class="form-group full-width">
+              <h3 style="font-size:1rem; margin-top:1rem;">Feature Toggles</h3>
+            </div>
+            <div class="form-group" style="flex-direction:row; align-items:center; gap:0.5rem;">
+              <input type="checkbox" id="toggle-whatsapp" style="width:auto;" />
+              <label for="toggle-whatsapp" style="margin:0;">Enable Custom Chatbot</label>
+            </div>
+            <div class="form-group" style="flex-direction:row; align-items:center; gap:0.5rem;">
+              <input type="checkbox" id="toggle-topbar" style="width:auto;" />
+              <label for="toggle-topbar" style="margin:0;">Enable Top Info Bar</label>
+            </div>
+            <div class="form-group" style="flex-direction:row; align-items:center; gap:0.5rem;">
+              <input type="checkbox" id="toggle-ticker" style="width:auto;" />
+              <label for="toggle-ticker" style="margin:0;">Enable Announcements Ticker</label>
+            </div>
+            <div class="form-group" style="flex-direction:row; align-items:center; gap:0.5rem;">
+              <input type="checkbox" id="toggle-process" style="width:auto;" />
+              <label for="toggle-process" style="margin:0;">Enable "How It Works" Section</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Save Theme Settings</button>
+          </form>
+        </section>
+
+        <!-- Company Info Section -->
+        <section id="company-info-section" class="admin-section hidden">
+          <h2>About Stonex (Company Info)</h2>
+          <form id="company-info-form" class="admin-form">
+            <div class="form-group">
+              <label for="ci-name">Company Name</label>
+              <input type="text" id="ci-name" />
+            </div>
+            <div class="form-group">
+              <label for="ci-tagline">Tagline</label>
+              <input type="text" id="ci-tagline" />
+            </div>
+            <div class="form-group full-width">
+              <label for="ci-about">About Us Description</label>
+              <textarea id="ci-about" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="ci-stat-projects">Stat: Projects Completed</label>
+              <input type="number" id="ci-stat-projects" />
+            </div>
+            <div class="form-group">
+              <label for="ci-stat-clients">Stat: Happy Clients</label>
+              <input type="number" id="ci-stat-clients" />
+            </div>
+            <div class="form-group">
+              <label for="ci-stat-years">Stat: Years Experience</label>
+              <input type="number" id="ci-stat-years" />
+            </div>
+            <div class="form-group">
+              <label for="ci-stat-products">Stat: Products Distributed</label>
+              <input type="number" id="ci-stat-products" />
+            </div>
+            <button type="submit" class="btn-primary">Save About Info</button>
+          </form>
+        </section>
+
+        <!-- Hero Content Section -->
+        <section id="hero-section" class="admin-section hidden">
+          <h2>Hero Content</h2>
+          <form id="hero-form" class="admin-form">
+            <div class="form-group">
+              <label for="hero-title1">Title 1</label>
+              <input type="text" id="hero-title1" />
+            </div>
+            <div class="form-group">
+              <label for="hero-title2">Title 2</label>
+              <input type="text" id="hero-title2" />
+            </div>
+            <div class="form-group full-width">
+              <label for="hero-subtitle">Subtitle</label>
+              <textarea id="hero-subtitle" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="hero-btn1">Button 1 Text</label>
+              <input type="text" id="hero-btn1" />
+            </div>
+            <div class="form-group">
+              <label for="hero-badge">Badge Text</label>
+              <input type="text" id="hero-badge" />
+            </div>
+            <div class="form-group full-width">
+              <label>Hero Background Images (Slideshow)</label>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <div style="flex:1;">
+                  <label for="hero-bgImage1" style="font-size: 0.8rem;">Image 1</label>
+                  <input type="file" id="hero-bgImage1" accept="image/png, image/jpeg, image/webp" />
+                  <img id="hero-bgImage1-preview" style="max-width: 100%; display: none; margin-top: 10px; border-radius: 4px; border: 1px solid var(--border);" />
+                </div>
+                <div style="flex:1;">
+                  <label for="hero-bgImage2" style="font-size: 0.8rem;">Image 2</label>
+                  <input type="file" id="hero-bgImage2" accept="image/png, image/jpeg, image/webp" />
+                  <img id="hero-bgImage2-preview" style="max-width: 100%; display: none; margin-top: 10px; border-radius: 4px; border: 1px solid var(--border);" />
+                </div>
+                <div style="flex:1;">
+                  <label for="hero-bgImage3" style="font-size: 0.8rem;">Image 3</label>
+                  <input type="file" id="hero-bgImage3" accept="image/png, image/jpeg, image/webp" />
+                  <img id="hero-bgImage3-preview" style="max-width: 100%; display: none; margin-top: 10px; border-radius: 4px; border: 1px solid var(--border);" />
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">Save Hero Content</button>
+          </form>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services-section" class="admin-section hidden">
+          <h2>What We Offer (Services)</h2>
+          <p class="section-desc">Edit the 4 main service blocks.</p>
+          <form id="services-form" class="admin-form">
+            <!-- Rendered by JS -->
+            <div id="services-container" class="full-width" style="display:flex; flex-direction:column; gap:1.5rem;"></div>
+            <button type="submit" class="btn-primary">Save Services</button>
+          </form>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products-section" class="admin-section hidden">
+          <h2>Our Product Range</h2>
+          <p class="section-desc">Manage products in the database. (Image URLs can be direct links or left blank to use an emoji icon)</p>
+          <div id="products-list" style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2rem;">
+            <!-- Rendered by JS -->
+          </div>
+          
+          <div style="border-top:1px solid #30363d; padding-top:2rem;">
+            <h3 style="font-size:1.1rem; margin-bottom:1rem;">Add New Product</h3>
+            <form id="add-product-form" class="admin-form">
+              <div class="form-group">
+                <label for="new-prod-name">Name</label>
+                <input type="text" id="new-prod-name" required />
+              </div>
+              <div class="form-group">
+                <label for="new-prod-cat">Category</label>
+                <select id="new-prod-cat">
+                  <option value="civil">Civil</option>
+                  <option value="mechanical">Mechanical</option>
+                  <option value="electrical">Electrical</option>
+                  <option value="ppe">PPE</option>
+                  <option value="equipment">Equipment</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="new-prod-icon">Emoji Icon</label>
+                <input type="text" id="new-prod-icon" placeholder="e.g. 🔩" />
+              </div>
+              <div class="form-group full-width">
+                <label for="new-prod-desc">Description</label>
+                <textarea id="new-prod-desc" rows="2" required></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="background-color:#2ea043;">Add Product</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section id="why-choose-section" class="admin-section hidden">
+          <h2>Why Choose Stonex</h2>
+          <p class="section-desc">Edit the feature blocks.</p>
+          <form id="why-choose-form" class="admin-form">
+            <!-- Rendered by JS -->
+            <div id="why-choose-container" class="full-width" style="display:flex; flex-direction:column; gap:1.5rem;"></div>
+            <button type="submit" class="btn-primary">Save Reasons</button>
+          </form>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process-section" class="admin-section hidden">
+          <h2>How It Works (Process Steps)</h2>
+          <form id="process-form" class="admin-form">
+            <!-- Rendered by JS -->
+            <div id="process-container" class="full-width" style="display:flex; flex-direction:column; gap:1.5rem;"></div>
+            <button type="submit" class="btn-primary">Save Process Steps</button>
+          </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="admin-section hidden">
+          <h2>Get In Touch (Contact & Socials)</h2>
+          <form id="contact-form-admin" class="admin-form">
+            <div class="form-group">
+              <label for="ct-email">Support Email</label>
+              <input type="email" id="ct-email" />
+            </div>
+            <div class="form-group">
+              <label for="ct-phone">Phone Number</label>
+              <input type="text" id="ct-phone" />
+            </div>
+            <div class="form-group full-width">
+              <label for="ct-address">Address</label>
+              <input type="text" id="ct-address" />
+            </div>
+            <div class="form-group">
+              <label for="ct-hours">Working Hours</label>
+              <input type="text" id="ct-hours" />
+            </div>
+            <div class="form-group full-width">
+              <h3 style="font-size:1rem; margin-top:1rem;">Social Media Links</h3>
+            </div>
+            <div class="form-group">
+              <label for="ct-facebook">Facebook URL</label>
+              <input type="text" id="ct-facebook" />
+            </div>
+            <div class="form-group">
+              <label for="ct-linkedin">LinkedIn URL</label>
+              <input type="text" id="ct-linkedin" />
+            </div>
+            <div class="form-group">
+              <label for="ct-instagram">Instagram URL</label>
+              <input type="text" id="ct-instagram" />
+            </div>
+            <div class="form-group">
+              <label for="ct-whatsapp">WhatsApp Number (e.g. +966...)</label>
+              <input type="text" id="ct-whatsapp" />
+            </div>
+            <button type="submit" class="btn-primary">Save Contact Info</button>
+          </form>
+        </section>
+
+        <!-- Announcements Section -->
+        <section id="announcements-section" class="admin-section hidden">
+          <h2>Announcements Ticker</h2>
+          <p class="section-desc">Manage the ticker announcements (one per line).</p>
+          <form id="announcements-form" class="admin-form">
+            <div class="form-group full-width">
+              <label for="announcements-list">Announcements List</label>
+              <textarea id="announcements-list" rows="6"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Save Announcements</button>
+          </form>
+        </section>
+        
+        <!-- CHAT LEADS PANEL -->
+        <section id="leads-section" class="admin-section hidden">
+          <div class="panel-header">
+            <h2>Chat Leads</h2>
+            <p>View collected leads from the custom chatbot.</p>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="leads-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email / Phone</th>
+                  <th>Message / Notes</th>
+                  <th>Timestamp</th>
+                </tr>
+              </thead>
+              <tbody id="leads-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="admin.js?v=3"></script>
+</body>
+</html>

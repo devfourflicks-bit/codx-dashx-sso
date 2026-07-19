@@ -1,0 +1,526 @@
+diff --git a/index.html b/index.html
+index 5de05a2..e21e1ae 100644
+--- a/index.html
++++ b/index.html
+@@ -26,16 +26,16 @@
+       <div class="topbar-right">
+         <span>🕐 Sun–Thu: 8:00 AM – 6:00 PM</span>
+         <div class="social-icons">
+-          <a href="#" aria-label="Facebook" id="social-facebook">
++          <a href="#home" aria-label="Facebook" id="social-facebook">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+           </a>
+-          <a href="#" aria-label="LinkedIn" id="social-linkedin">
++          <a href="#home" aria-label="LinkedIn" id="social-linkedin">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+           </a>
+-          <a href="#" aria-label="Instagram" id="social-instagram">
++          <a href="#home" aria-label="Instagram" id="social-instagram">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+           </a>
+-          <a href="#" aria-label="WhatsApp" id="social-whatsapp">
++          <a href="#home" aria-label="WhatsApp" id="social-whatsapp">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+           </a>
+         </div>
+@@ -102,419 +102,14 @@
+     </ul>
+   </div>
+ 
+-  <main>
++  <main class="page-content page-transition">
+ 
+-    <!-- ===== HERO SECTION ===== -->
+-    <section class="hero" id="home">
+-      <div class="hero-bg">
+-        <img src="hero_banner.jpg" alt="Stonex industrial site with cranes and construction equipment at dusk" class="hero-img" />
+-        <div class="hero-overlay"></div>
+-      </div>
+-      <div class="container hero-content">
+-        <div class="hero-badge animate-fade-up" style="animation-delay:0.1s">
+-          <span class="badge-dot"></span> <span id="hero-badge-text">Trusted Industrial Partner</span>
+-        </div>
+-        <h1 class="hero-title animate-fade-up" style="animation-delay:0.2s">
+-          <span id="hero-title-line1">Powering Industry</span><br/>
+-          <span class="hero-highlight" id="hero-title-line2">One Solution at a Time</span>
+-        </h1>
+-        <p class="hero-desc animate-fade-up" style="animation-delay:0.35s" id="hero-subtitle-text">
+-          Stonex delivers comprehensive industrial trading, heavy equipment rentals, civil material supply, and premium PPE — all under one roof.
+-        </p>
+-        <div class="hero-actions animate-fade-up" style="animation-delay:0.5s">
+-          <a href="#services" class="btn btn-primary btn-lg" id="hero-explore-btn">Explore Services</a>
+-          <a href="#contact" class="btn btn-outline btn-lg" id="hero-contact-btn">Contact Us</a>
+-        </div>
+-        <div class="hero-stats animate-fade-up" style="animation-delay:0.65s">
+-          <div class="stat-item">
+-            <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+-            <span class="stat-label">Projects Completed</span>
+-          </div>
+-          <div class="stat-divider"></div>
+-          <div class="stat-item">
+-            <span class="stat-number" data-count="200">0</span><span class="stat-suffix">+</span>
+-            <span class="stat-label">Happy Clients</span>
+-          </div>
+-          <div class="stat-divider"></div>
+-          <div class="stat-item">
+-            <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
+-            <span class="stat-label">Years Experience</span>
+-          </div>
+-          <div class="stat-divider"></div>
+-          <div class="stat-item">
+-            <span class="stat-number" data-count="1000">0</span><span class="stat-suffix">+</span>
+-            <span class="stat-label">Products Available</span>
+-          </div>
+-        </div>
+-      </div>
+-      <div class="hero-scroll-indicator">
+-        <span>Scroll Down</span>
+-        <div class="scroll-arrow">
+-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <!-- ===== ANNOUNCEMENT TICKER ===== -->
+-    <div class="ticker-wrap" aria-label="Announcements">
+-      <div class="ticker-label">NEWS</div>
+-      <div class="ticker-content">
+-        <div class="ticker-items">
+-          <span>🏗️ New heavy equipment fleet now available for rental across all regions</span>
+-          <span>⚙️ Expanded catalogue of mechanical &amp; electrical items — 1000+ SKUs</span>
+-          <span>🦺 ISO-certified PPE equipment in stock — same-day delivery available</span>
+-          <span>🪨 Bulk civil material supply with competitive pricing</span>
+-          <span>🔧 Now offering preventive maintenance contracts for rented equipment</span>
+-        </div>
+-        <div class="ticker-items" aria-hidden="true">
+-          <span>🏗️ New heavy equipment fleet now available for rental across all regions</span>
+-          <span>⚙️ Expanded catalogue of mechanical &amp; electrical items — 1000+ SKUs</span>
+-          <span>🦺 ISO-certified PPE equipment in stock — same-day delivery available</span>
+-          <span>🪨 Bulk civil material supply with competitive pricing</span>
+-          <span>🔧 Now offering preventive maintenance contracts for rented equipment</span>
+-        </div>
+-      </div>
+-    </div>
+-
+-    <!-- ===== SERVICES SECTION ===== -->
+-    <section class="services section" id="services">
+-      <div class="container">
+-        <div class="section-header">
+-          <p class="section-label">What We Offer</p>
+-          <h2 class="section-title">Our Core Services</h2>
+-          <p class="section-desc">Comprehensive industrial solutions designed to support every phase of your project — from procurement to completion.</p>
+-        </div>
+-
+-        <div class="services-grid">
+-
+-          <div class="service-card" id="service-card-industrial">
+-            <div class="service-card-img-wrap">
+-              <img src="industrial_trading.jpg" alt="Industrial trading warehouse with mechanical and electrical items" loading="lazy" />
+-              <div class="service-card-badge">Industrial Trading</div>
+-            </div>
+-            <div class="service-card-body">
+-              <div class="service-icon">
+-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+-              </div>
+-              <h3>Industrial Trading</h3>
+-              <p>Civil, mechanical, and electrical items sourced from globally certified manufacturers. We supply bulk or individual orders with fast turnaround.</p>
+-              <ul class="service-list">
+-                <li>Civil Construction Items</li>
+-                <li>Mechanical Components</li>
+-                <li>Electrical Equipment</li>
+-                <li>Pipes, Valves &amp; Fittings</li>
+-              </ul>
+-              <a href="#contact" class="btn btn-outline-sm" id="service-btn-industrial">Request Quote →</a>
+-            </div>
+-          </div>
+-
+-          <div class="service-card featured" id="service-card-equipment">
+-            <div class="service-card-img-wrap">
+-              <img src="equipment_rental.jpg" alt="Heavy construction equipment fleet at night" loading="lazy" />
+-              <div class="service-card-badge featured-badge">Equipment Rental</div>
+-            </div>
+-            <div class="service-card-body">
+-              <div class="service-icon">
+-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+-              </div>
+-              <h3>Heavy Equipment Rentals</h3>
+-              <p>Access a premium fleet of well-maintained heavy construction equipment. Flexible rental terms with operator support available.</p>
+-              <ul class="service-list">
+-                <li>Excavators &amp; Backhoes</li>
+-                <li>Mobile Cranes &amp; Boom Lifts</li>
+-                <li>Forklifts &amp; Skid Steers</li>
+-                <li>Compactors &amp; Rollers</li>
+-              </ul>
+-              <a href="#contact" class="btn btn-primary-sm" id="service-btn-equipment">Request Quote →</a>
+-            </div>
+-          </div>
+-
+-          <div class="service-card" id="service-card-civil">
+-            <div class="service-card-img-wrap">
+-              <img src="civil_material.jpg" alt="Civil construction materials warehouse" loading="lazy" />
+-              <div class="service-card-badge">Civil Material</div>
+-            </div>
+-            <div class="service-card-body">
+-              <div class="service-icon">
+-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+-              </div>
+-              <h3>Civil Material Supply</h3>
+-              <p>We supply all grades of civil construction materials in bulk quantity with guaranteed quality and timely delivery to your site.</p>
+-              <ul class="service-list">
+-                <li>Cement &amp; Aggregates</li>
+-                <li>Steel Rebar &amp; Mesh</li>
+-                <li>Sand, Gravel &amp; Blocks</li>
+-                <li>Formwork &amp; Scaffolding</li>
+-              </ul>
+-              <a href="#contact" class="btn btn-outline-sm" id="service-btn-civil">Request Quote →</a>
+-            </div>
+-          </div>
+ 
+-          <div class="service-card" id="service-card-ppe">
+-            <div class="service-card-img-wrap">
+-              <img src="ppe_items.jpg" alt="Personal protective equipment collection including helmet, vest, gloves, boots" loading="lazy" />
+-              <div class="service-card-badge">PPE Items</div>
+-            </div>
+-            <div class="service-card-body">
+-              <div class="service-icon">
+-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+-              </div>
+-              <h3>Personal Protective Equipment</h3>
+-              <p>Certified and standard-compliant PPE for every industry need. Protect your workforce with premium safety gear.</p>
+-              <ul class="service-list">
+-                <li>Safety Helmets &amp; Goggles</li>
+-                <li>Hi-Vis Vests &amp; Coveralls</li>
+-                <li>Gloves &amp; Safety Shoes</li>
+-                <li>Fall Protection Gear</li>
+-              </ul>
+-              <a href="#contact" class="btn btn-outline-sm" id="service-btn-ppe">Request Quote →</a>
+-            </div>
+-          </div>
+ 
+-        </div>
+-      </div>
+-    </section>
+ 
+-    <!-- ===== ABOUT SECTION ===== -->
+-    <section class="about section" id="about">
+-      <div class="container about-grid">
+-        <div class="about-image-wrap">
+-          <img src="about_company.jpg" alt="Stonex professional team of engineers at industrial facility" class="about-img" loading="lazy" />
+-          <div class="about-badge-card">
+-            <div class="about-badge-icon">🏆</div>
+-            <div>
+-              <strong>ISO Certified</strong>
+-              <span>Quality Assured Partner</span>
+-            </div>
+-          </div>
+-          <div class="about-experience-tag">
+-            <span class="exp-number">15+</span>
+-            <span class="exp-text">Years of Excellence</span>
+-          </div>
+-        </div>
+ 
+-        <div class="about-content">
+-          <p class="section-label">About Stonex</p>
+-          <h2 class="section-title left">Building the Backbone<br/>of Industry</h2>
+-          <p class="about-desc">
+-            Stonex is a premier industrial trading company committed to delivering high-quality products and services to construction, oil &amp; gas, manufacturing, and infrastructure sectors. We pride ourselves on being a one-stop solution for all your industrial needs.
+-          </p>
+-          <p class="about-desc">
+-            With over 15 years of industry experience, our team of experts ensures that every order, every rental, and every delivery meets the highest standards of quality and reliability.
+-          </p>
+ 
+-          <div class="about-features">
+-            <div class="about-feature" id="about-feature-1">
+-              <div class="feature-check">✓</div>
+-              <div>
+-                <strong>Certified & Compliant Products</strong>
+-                <p>All our products meet international safety standards and certifications.</p>
+-              </div>
+-            </div>
+-            <div class="about-feature" id="about-feature-2">
+-              <div class="feature-check">✓</div>
+-              <div>
+-                <strong>Fast & Reliable Delivery</strong>
+-                <p>We ensure on-time delivery to your site, no matter the scale.</p>
+-              </div>
+-            </div>
+-            <div class="about-feature" id="about-feature-3">
+-              <div class="feature-check">✓</div>
+-              <div>
+-                <strong>24/7 Technical Support</strong>
+-                <p>Our support team is always available to assist with any queries.</p>
+-              </div>
+-            </div>
+-            <div class="about-feature" id="about-feature-4">
+-              <div class="feature-check">✓</div>
+-              <div>
+-                <strong>Competitive Pricing</strong>
+-                <p>Best market rates without compromising on quality.</p>
+-              </div>
+-            </div>
+-          </div>
+-
+-          <a href="#contact" class="btn btn-primary btn-lg" id="about-cta-btn">Work With Us</a>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <!-- ===== PRODUCT CATEGORIES ===== -->
+-    <section class="products section" id="products">
+-      <div class="container">
+-        <div class="section-header">
+-          <p class="section-label">Our Product Range</p>
+-          <h2 class="section-title">Categories We Supply</h2>
+-          <p class="section-desc">Browse our extensive product range across all major industrial categories.</p>
+-        </div>
+-
+-        <div class="products-tabs" id="products-tabs">
+-          <button class="tab-btn active" data-tab="civil" id="tab-civil">Civil Items</button>
+-          <button class="tab-btn" data-tab="mechanical" id="tab-mechanical">Mechanical</button>
+-          <button class="tab-btn" data-tab="electrical" id="tab-electrical">Electrical</button>
+-          <button class="tab-btn" data-tab="ppe" id="tab-ppe">PPE</button>
+-          <button class="tab-btn" data-tab="equipment" id="tab-equipment">Equipment</button>
+-        </div>
+-
+-        <div class="tab-content-area">
+-
+-          <div class="tab-panel active" id="panel-civil">
+-            <div class="product-grid">
+-              <div class="product-card" id="prod-cement"><div class="product-icon">🪨</div><h4>Cement & Binders</h4><p>OPC, PPC, and specialty cement grades</p></div>
+-              <div class="product-card" id="prod-rebar"><div class="product-icon">🔩</div><h4>Steel Rebar & TMT</h4><p>Grade 500D, 550D rebar in all sizes</p></div>
+-              <div class="product-card" id="prod-blocks"><div class="product-icon">🧱</div><h4>Blocks & Bricks</h4><p>Hollow, solid, and AAC blocks</p></div>
+-              <div class="product-card" id="prod-pipes"><div class="product-icon">🔧</div><h4>PVC & HDPE Pipes</h4><p>All diameters, pressure-rated</p></div>
+-              <div class="product-card" id="prod-aggregates"><div class="product-icon">⛏️</div><h4>Aggregates & Sand</h4><p>Washed sand, crushed stone, gravel</p></div>
+-              <div class="product-card" id="prod-formwork"><div class="product-icon">🏗️</div><h4>Formwork Systems</h4><p>Plywood, panel, and system formwork</p></div>
+-            </div>
+-          </div>
+-
+-          <div class="tab-panel" id="panel-mechanical">
+-            <div class="product-grid">
+-              <div class="product-card" id="prod-pumps"><div class="product-icon">💧</div><h4>Industrial Pumps</h4><p>Centrifugal, submersible, booster pumps</p></div>
+-              <div class="product-card" id="prod-valves"><div class="product-icon">⚙️</div><h4>Valves & Fittings</h4><p>Ball, gate, check valves, flanges</p></div>
+-              <div class="product-card" id="prod-bearings"><div class="product-icon">🔄</div><h4>Bearings & Seals</h4><p>SKF, FAG, NSK bearings in all types</p></div>
+-              <div class="product-card" id="prod-fasteners"><div class="product-icon">🔩</div><h4>Fasteners & Hardware</h4><p>Bolts, nuts, anchors, threaded rods</p></div>
+-              <div class="product-card" id="prod-tools"><div class="product-icon">🛠️</div><h4>Hand & Power Tools</h4><p>Professional grade tools for all trades</p></div>
+-              <div class="product-card" id="prod-hoses"><div class="product-icon">🌀</div><h4>Hoses & Couplings</h4><p>Hydraulic, pneumatic, water hoses</p></div>
+-            </div>
+-          </div>
+-
+-          <div class="tab-panel" id="panel-electrical">
+-            <div class="product-grid">
+-              <div class="product-card" id="prod-cables"><div class="product-icon">⚡</div><h4>Cables & Wires</h4><p>Power, control, instrumentation cables</p></div>
+-              <div class="product-card" id="prod-switchgear"><div class="product-icon">🔌</div><h4>Switchgear & Panels</h4><p>MCBs, MCCBs, ACBs, distribution boards</p></div>
+-              <div class="product-card" id="prod-motors"><div class="product-icon">⚙️</div><h4>Electric Motors</h4><p>IE3, ATEX, VFD-compatible motors</p></div>
+-              <div class="product-card" id="prod-lighting"><div class="product-icon">💡</div><h4>Industrial Lighting</h4><p>LED, explosion-proof, floodlights</p></div>
+-              <div class="product-card" id="prod-conduit"><div class="product-icon">🔗</div><h4>Conduit & Trunking</h4><p>GI, PVC, flexible conduit systems</p></div>
+-              <div class="product-card" id="prod-instrumentation"><div class="product-icon">📊</div><h4>Instrumentation</h4><p>Sensors, transmitters, gauges</p></div>
+-            </div>
+-          </div>
+-
+-          <div class="tab-panel" id="panel-ppe">
+-            <div class="product-grid">
+-              <div class="product-card" id="prod-helmets"><div class="product-icon">⛑️</div><h4>Safety Helmets</h4><p>Class A, B, C rated hard hats</p></div>
+-              <div class="product-card" id="prod-vests"><div class="product-icon">🦺</div><h4>Hi-Vis Clothing</h4><p>Class 2 &amp; 3 reflective vests, coveralls</p></div>
+-              <div class="product-card" id="prod-gloves"><div class="product-icon">🧤</div><h4>Safety Gloves</h4><p>Cut-resistant, chemical, welding gloves</p></div>
+-              <div class="product-card" id="prod-eyewear"><div class="product-icon">🥽</div><h4>Eye &amp; Face Protection</h4><p>Goggles, face shields, welding visors</p></div>
+-              <div class="product-card" id="prod-footwear"><div class="product-icon">👟</div><h4>Safety Footwear</h4><p>Steel toe, composite, chemical-resistant</p></div>
+-              <div class="product-card" id="prod-fall"><div class="product-icon">🧗</div><h4>Fall Protection</h4><p>Harnesses, lanyards, anchor systems</p></div>
+-            </div>
+-          </div>
+-
+-          <div class="tab-panel" id="panel-equipment">
+-            <div class="product-grid">
+-              <div class="product-card" id="prod-excavator"><div class="product-icon">🚜</div><h4>Excavators</h4><p>Mini to large class, tracked &amp; wheeled</p></div>
+-              <div class="product-card" id="prod-crane"><div class="product-icon">🏗️</div><h4>Mobile Cranes</h4><p>15T–200T capacity range</p></div>
+-              <div class="product-card" id="prod-forklift"><div class="product-icon">🔱</div><h4>Forklifts</h4><p>Electric, diesel, 3T–20T capacity</p></div>
+-              <div class="product-card" id="prod-compactor"><div class="product-icon">🛞</div><h4>Compactors</h4><p>Plate, rammer, and road rollers</p></div>
+-              <div class="product-card" id="prod-generator"><div class="product-icon">⚡</div><h4>Generators</h4><p>20kVA–2000kVA, silenced sets</p></div>
+-              <div class="product-card" id="prod-aerial"><div class="product-icon">🔝</div><h4>Aerial Platforms</h4><p>Boom lifts, scissor lifts, telehandlers</p></div>
+-            </div>
+-          </div>
+-
+-        </div>
+-      </div>
+-    </section>
+-
+-    <!-- ===== WHY CHOOSE US ===== -->
+-    <section class="why-us section" id="why-us">
+-      <div class="why-us-bg"></div>
+-      <div class="container">
+-        <div class="section-header">
+-          <p class="section-label light">Why Choose Stonex</p>
+-          <h2 class="section-title light">Your Trusted Industrial Partner</h2>
+-          <p class="section-desc light">We go beyond just supplying products — we build long-term partnerships based on trust, quality, and service excellence.</p>
+-        </div>
+-
+-        <div class="why-grid">
+-          <div class="why-card" id="why-card-1">
+-            <div class="why-icon">
+-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+-            </div>
+-            <h3>Quality Assured</h3>
+-            <p>Every product is sourced from certified manufacturers and tested to meet international quality and safety standards.</p>
+-          </div>
+-          <div class="why-card" id="why-card-2">
+-            <div class="why-icon">
+-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+-            </div>
+-            <h3>Fast Delivery</h3>
+-            <p>Our logistics network ensures prompt, reliable delivery to your project site — even for bulk and urgent orders.</p>
+-          </div>
+-          <div class="why-card" id="why-card-3">
+-            <div class="why-icon">
+-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+-            </div>
+-            <h3>Expert Team</h3>
+-            <p>Our team of industry experts provides technical consultation and support to help you choose the right products.</p>
+-          </div>
+-          <div class="why-card" id="why-card-4">
+-            <div class="why-icon">
+-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+-            </div>
+-            <h3>Competitive Pricing</h3>
+-            <p>We offer transparent, market-competitive pricing for all services with no hidden costs or surprises.</p>
+-          </div>
+-          <div class="why-card" id="why-card-5">
+-            <div class="why-icon">
+-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+-            </div>
+-            <h3>Wide Coverage</h3>
+-            <p>Serving clients across the region with multiple supply points and a flexible, scalable distribution network.</p>
+-          </div>
+-          <div class="why-card" id="why-card-6">
+-            <div class="why-icon">
+-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+-            </div>
+-            <h3>Customer Satisfaction</h3>
+-            <p>200+ satisfied clients trust us for repeat business. Our after-sales support ensures complete satisfaction.</p>
+-          </div>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <!-- ===== PROCESS SECTION ===== -->
+-    <section class="process section" id="process">
+-      <div class="container">
+-        <div class="section-header">
+-          <p class="section-label">How It Works</p>
+-          <h2 class="section-title">Simple 4-Step Process</h2>
+-          <p class="section-desc">Getting what you need from Stonex is fast and straightforward.</p>
+-        </div>
+-        <div class="process-steps">
+-          <div class="process-step" id="process-step-1">
+-            <div class="step-number">01</div>
+-            <div class="step-icon">📋</div>
+-            <h3>Submit Inquiry</h3>
+-            <p>Contact us via form, phone, or email with your requirements and quantities needed.</p>
+-          </div>
+-          <div class="process-arrow">→</div>
+-          <div class="process-step" id="process-step-2">
+-            <div class="step-number">02</div>
+-            <div class="step-icon">💬</div>
+-            <h3>Get Quotation</h3>
+-            <p>Receive a detailed, transparent quotation within 24 hours from our expert team.</p>
+-          </div>
+-          <div class="process-arrow">→</div>
+-          <div class="process-step" id="process-step-3">
+-            <div class="step-number">03</div>
+-            <div class="step-icon">✅</div>
+-            <h3>Confirm Order</h3>
+-            <p>Review and approve the quote. We handle all logistics and documentation for you.</p>
+-          </div>
+-          <div class="process-arrow">→</div>
+-          <div class="process-step" id="process-step-4">
+-            <div class="step-number">04</div>
+-            <div class="step-icon">🚛</div>
+-            <h3>Delivery & Support</h3>
+-            <p>Products delivered to your site on schedule with full after-sales support.</p>
+-          </div>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <!-- ===== CONTACT SECTION ===== -->
++<!-- ===== CONTACT SECTION ===== -->
+     <section class="contact section" id="contact">
+       <div class="container contact-grid">
+         <div class="contact-info">
+@@ -554,13 +149,13 @@
+           </div>
+ 
+           <div class="contact-social">
+-            <a href="#" aria-label="Facebook" id="contact-social-fb" class="contact-social-btn">
++            <a href="index.html" aria-label="Facebook" id="contact-social-fb" class="contact-social-btn">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+             </a>
+-            <a href="#" aria-label="LinkedIn" id="contact-social-li" class="contact-social-btn">
++            <a href="index.html" aria-label="LinkedIn" id="contact-social-li" class="contact-social-btn">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+             </a>
+-            <a href="#" aria-label="WhatsApp" id="contact-social-wa" class="contact-social-btn">
++            <a href="index.html" aria-label="WhatsApp" id="contact-social-wa" class="contact-social-btn">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+             </a>
+           </div>
+@@ -619,8 +214,7 @@
+       </div>
+     </section>
+ 
+-  </main>
+-
++</main>
+   <!-- ===== FOOTER ===== -->
+   <footer class="footer" id="footer">
+     <div class="footer-top">
+@@ -645,10 +239,10 @@
+           </a>
+           <p class="footer-brand-desc">Your trusted partner for industrial trading, heavy equipment rentals, civil material supply, and premium PPE products.</p>
+           <div class="footer-social">
+-            <a href="#" aria-label="Facebook" id="footer-fb" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+-            <a href="#" aria-label="LinkedIn" id="footer-li" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+-            <a href="#" aria-label="Instagram" id="footer-ig" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+-            <a href="#" aria-label="WhatsApp" id="footer-wa" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
++            <a href="#home" aria-label="Facebook" id="footer-fb" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
++            <a href="#home" aria-label="LinkedIn" id="footer-li" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
++            <a href="#home" aria-label="Instagram" id="footer-ig" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
++            <a href="#home" aria-label="WhatsApp" id="footer-wa" class="footer-social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+           </div>
+         </div>
+ 
+@@ -692,11 +286,32 @@
+     </div>
+   </footer>
+ 
+-  <!-- WhatsApp Float Button -->
+-  <a href="https://wa.me/966500000000" class="whatsapp-float" id="whatsapp-float-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
++  <!-- Custom Chatbot -->
++  <div class="chatbot-container" id="chatbot-container" style="display: none;">
++    <div class="chatbot-header">
++      <h4>Chat with Us</h4>
++      <button class="chatbot-close" id="chatbot-close-btn">&times;</button>
++    </div>
++    <div class="chatbot-body" id="chatbot-body">
++      <p class="chatbot-greeting">Hello! Please provide your details below so we can assist you.</p>
++      <form id="chatbot-form">
++        <input type="text" id="chat-name" placeholder="Your Name" required />
++        <input type="email" id="chat-email" placeholder="Your Email" required />
++        <input type="tel" id="chat-phone" placeholder="Your Phone Number" required />
++        <button type="submit" class="btn btn-primary btn-full" id="chat-submit-btn">
++          <span class="btn-text">Send Message</span>
++        </button>
++      </form>
++      <div id="chat-success" style="display: none; text-align: center; color: var(--color-primary); margin-top: 10px; font-size: 14px;">
++        Thanks! We'll contact you soon.
++      </div>
++    </div>
++  </div>
++
++  <button class="whatsapp-float custom-chat-float" id="whatsapp-float-btn" aria-label="Open Chat">
++    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+     <span class="whatsapp-tooltip">Chat with us!</span>
+-  </a>
++  </button>
+ 
+   <!-- Back to Top -->
+   <button class="back-to-top" id="back-to-top-btn" aria-label="Scroll to top">

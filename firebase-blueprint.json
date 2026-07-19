@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "SeoConfig": {
+      "title": "SEO Settings",
+      "description": "Site-wide SEO configurations like Title, Description and Keywords",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The meta title of the website"
+        },
+        "description": {
+          "type": "string",
+          "description": "The meta description of the website"
+        },
+        "keywords": {
+          "type": "string",
+          "description": "The meta keywords of the website"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "keywords"
+      ]
+    }
+  },
+  "firestore": {
+    "siteConfig/seo": {
+      "schema": "SeoConfig",
+      "description": "The global SEO configurations for the website"
+    }
+  }
+}

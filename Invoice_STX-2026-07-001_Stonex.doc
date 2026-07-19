@@ -1,0 +1,209 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' 
+      xmlns:w='urn:schemas-microsoft-com:office:word' 
+      xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+  <meta charset="utf-8">
+  <title>Invoice STX-2026-07-001</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <w:WordDocument>
+      <w:View>Print</w:View>
+      <w:Zoom>100</w:Zoom>
+    </w:WordDocument>
+  </xml>
+  <![endif]-->
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #334155; margin: 40px; }
+    h1 { text-align: center; color: #4f46e5; font-size: 24pt; margin-bottom: 5px; font-weight: bold; }
+    .subtitle { text-align: center; color: #64748b; font-size: 11pt; margin-bottom: 30px; }
+    h2 { color: #1e293b; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; margin-top: 30px; font-size: 15pt; font-weight: bold; }
+    .meta-table, .line-table { width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 20px; }
+    .meta-table td { border: none; padding: 6px; vertical-align: top; font-size: 10pt; }
+    .line-table th, .line-table td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; font-size: 9.5pt; }
+    .line-table th { background-color: #f8fafc; color: #1e293b; font-weight: bold; }
+    .total-row { font-weight: bold; background-color: #f1f5f9; }
+    .highlight { font-weight: bold; color: #4f46e5; }
+    .terms-list { font-size: 9.5pt; padding-left: 20px; }
+    .terms-list li { margin-bottom: 6px; }
+    .bank-info { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; margin-top: 15px; }
+    .bank-info table { width: 100%; border-collapse: collapse; }
+    .bank-info td { padding: 4px; border: none; font-size: 9.5pt; }
+  </style>
+</head>
+<body>
+  <h1>SOFTWARE DEVELOPMENT INVOICE</h1>
+  <p class="subtitle">STX-2026-07-001 &bull; Stonex Minerals & Logistics Group Modernization</p>
+
+  <h2>1. INVOICE META DETAILS</h2>
+  <table class="meta-table">
+    <tr>
+      <td style="width: 50%;">
+        <strong>Developer / Service Provider:</strong><br/>
+        DevFlick Solutions Private Limited<br/>
+        Email: developer@devflicks.io<br/>
+        GSTIN: 27AAAAA1111A1Z1
+      </td>
+      <td style="width: 50%;">
+        <strong>Client Details:</strong><br/>
+        Stonex Minerals & Logistics Group<br/>
+        Email: stonexmeopr@gmail.com<br/>
+        Project Name: Stonex Dashboard Modernization
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Invoice Number:</strong> STX-2026-07-001<br/>
+        <strong>Date:</strong> July 18, 2026
+      </td>
+      <td>
+        <strong>Due Date:</strong> Upon Receipt<br/>
+        <strong>Currency:</strong> Indian Rupee (INR - ₹)
+      </td>
+    </tr>
+  </table>
+
+  <h2>2. COMPREHENSIVE DELIVERABLES & MODULE BREAKDOWN</h2>
+  <table class="line-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Task / Module</th>
+        <th style="width: 45%;">Description</th>
+        <th style="width: 15%; text-align: center;">Hours</th>
+        <th style="width: 15%; text-align: right;">Amount (INR)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Phase 1: Architecture & DB Design</strong></td>
+        <td>Setup project boilerplate with Vite, TypeScript, and Firebase. Structured the database blueprints and security rules.</td>
+        <td style="text-align: center;">15</td>
+        <td style="text-align: right;">₹37,500</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 2: Legacy Frontend Migration</strong></td>
+        <td>Ported raw assets, style rules, and structural logic from static files (tmp_frontend/) to high-fidelity, interactive React widgets.</td>
+        <td style="text-align: center;">45</td>
+        <td style="text-align: right;">₹1,12,500</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 3: Auth & Role Registry</strong></td>
+        <td>Installed secure Google/Email authentication and a strict administrative role control layer.</td>
+        <td style="text-align: center;">20</td>
+        <td style="text-align: right;">₹50,000</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 4: Operational Dashboards</strong></td>
+        <td>Built administrative tabs for Lead Management, Product Catalogs, Logistics pipelines, and Announcements.</td>
+        <td style="text-align: center;">35</td>
+        <td style="text-align: right;">₹87,500</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 5: Hero Media Optimization</strong></td>
+        <td>Patched asset preloading, configured active browser fallback images, and streamlined media uploading mechanics.</td>
+        <td style="text-align: center;">15</td>
+        <td style="text-align: right;">₹37,500</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 6: QA, Performance & Build</strong></td>
+        <td>Full unit-testing suite compliance, static type analyses (tsc), bundle bundling minimization, and layout polishing.</td>
+        <td style="text-align: center;">10</td>
+        <td style="text-align: right;">₹25,000</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="2">Subtotal</td>
+        <td style="text-align: center;">140 Hours</td>
+        <td style="text-align: right;">₹3,50,000</td>
+      </tr>
+      <tr>
+        <td colspan="3">CGST @ 9%</td>
+        <td style="text-align: right;">₹31,500</td>
+      </tr>
+      <tr>
+        <td colspan="3">SGST @ 9%</td>
+        <td style="text-align: right;">₹31,500</td>
+      </tr>
+      <tr class="total-row" style="background-color: #e0e7ff; color: #4f46e5;">
+        <td colspan="3" style="font-size: 11pt;">Total Due (Inclusive of Taxes)</td>
+        <td style="text-align: right; font-size: 11pt;">₹4,13,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Total Amount Payable:</strong> <span class="highlight">₹4,13,000/- (Rupees Four Lakh Thirteen Thousand Only)</span></p>
+
+  <h2>3. REVENUE MILESTONES & RECEIVED PAYMENTS</h2>
+  <table class="line-table">
+    <thead>
+      <tr>
+        <th style="width: 50%;">Milestone description</th>
+        <th style="width: 25%; text-align: center;">Status</th>
+        <th style="width: 25%; text-align: right;">Amount (INR)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Milestone 1 (Advance / Retainer)</td>
+        <td style="text-align: center; color: #16a34a; font-weight: bold;">Paid</td>
+        <td style="text-align: right;">₹1,05,000</td>
+      </tr>
+      <tr>
+        <td>Milestone 2 (Beta Delivery & DB Integration)</td>
+        <td style="text-align: center; color: #16a34a; font-weight: bold;">Paid</td>
+        <td style="text-align: right;">₹1,40,000</td>
+      </tr>
+      <tr>
+        <td>Milestone 3 (Final Delivery, Media Preload Fix & Signoff)</td>
+        <td style="text-align: center; color: #e11d48; font-weight: bold;">Due Now</td>
+        <td style="text-align: right;">₹1,05,000</td>
+      </tr>
+      <tr>
+        <td>GST Add-on (18% of Subtotal)</td>
+        <td style="text-align: center; color: #e11d48; font-weight: bold;">Due Now</td>
+        <td style="text-align: right;">₹63,000</td>
+      </tr>
+      <tr class="total-row" style="background-color: #fef2f2; color: #b91c1c;">
+        <td colspan="2">Net Outstanding Balance</td>
+        <td style="text-align: right;">₹1,68,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. BANK TRANSFER DETAILS (IMPS/NEFT/RTGS)</h2>
+  <div class="bank-info">
+    <table>
+      <tr>
+        <td style="width: 30%;"><strong>Bank Name:</strong></td>
+        <td>HDFC Bank Ltd.</td>
+      </tr>
+      <tr>
+        <td><strong>Account Name:</strong></td>
+        <td>DevFlick Solutions Private Limited</td>
+      </tr>
+      <tr>
+        <td><strong>Account Type:</strong></td>
+        <td>Current Account</td>
+      </tr>
+      <tr>
+        <td><strong>Account Number:</strong></td>
+        <td>50200012345678</td>
+      </tr>
+      <tr>
+        <td><strong>IFSC Code:</strong></td>
+        <td>HDFC0000123</td>
+      </tr>
+      <tr>
+        <td><strong>Branch:</strong></td>
+        <td>Mumbai Central, Maharashtra, India</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>5. TERMS & CONDITIONS</h2>
+  <ol class="terms-list">
+    <li><strong>Payment Term:</strong> 7 Days from the invoice date (Net 7).</li>
+    <li><strong>Intellectual Property:</strong> All intellectual property, code files, design assets, and database schemas will fully transfer to the client upon receipt of the final payment.</li>
+    <li><strong>Support and Maintenance:</strong> Includes 30 days of complimentary technical support starting from the date of final payout, covering bug fixes and minor style adjustments.</li>
+    <li><strong>Hosting:</strong> Cloud Run container environment and Firebase Hosting costs are to be paid directly by the client under their own account credentials.</li>
+  </ol>
+</body>
+</html>

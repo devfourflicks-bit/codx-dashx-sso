@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/tmp_frontend",
+      "destination": "/tmp_frontend/index.html"
+    },
+    {
+      "source": "/tmp_frontend/",
+      "destination": "/tmp_frontend/index.html"
+    },
+    {
+      "source": "/tmp_frontend/:path*",
+      "destination": "/tmp_frontend/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/((?!api|tmp_frontend|assets|.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
