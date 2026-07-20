@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { Lead } from '../types';
-import { Users, Mail, Phone, Calendar, MessageSquare, Search, Filter, Loader2 } from 'lucide-react';
+import { Users, Mail, Phone, Calendar, MessageSquare, Search, Filter, Loader2, RefreshCw } from 'lucide-react';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { useConfirm } from './ConfirmDialog';
@@ -13,9 +13,10 @@ import { useConfirm } from './ConfirmDialog';
 interface LeadsSectionProps {
   leads: Lead[];
   onUpdateLead?: () => void;
+  isLoading?: boolean;
 }
 
-export default function LeadsSection({ leads, onUpdateLead }: LeadsSectionProps) {
+export default function LeadsSection({ leads, onUpdateLead, isLoading = false }: LeadsSectionProps) {
   const { confirm } = useConfirm();
   const [filterQuery, setFilterQuery] = useState('');
   const [typeFilter, setTypeFilter] = useState('all'); // all, new, standard, status_new, status_progress, etc.
@@ -85,7 +86,17 @@ export default function LeadsSection({ leads, onUpdateLead }: LeadsSectionProps)
           </p>
         </div>
 
-        <div className="text-right shrink-0">
+        <div className="flex items-center gap-2 text-right shrink-0">
+          {onUpdateLead && (
+            <button
+              onClick={onUpdateLead}
+              disabled={isLoading}
+              className="p-1.5 text-slate-400 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 transition-all disabled:opacity-50"
+              title="Refresh Leads"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin text-violet-600' : ''}`} />
+            </button>
+          )}
           <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-violet-50 dark:bg-violet-950/40 text-xs font-black text-violet-600 dark:text-violet-400 rounded-full border border-violet-100/50 dark:border-violet-900/40">
             Total Collected: {leads.length}
           </span>
@@ -139,7 +150,28 @@ export default function LeadsSection({ leads, onUpdateLead }: LeadsSectionProps)
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-150 dark:divide-slate-750">
-            {filteredLeads.length === 0 ? (
+            {isLoading ? (
+              Array.from({ length: 3 }).map((_, idx) => (
+                <tr key={`skeleton-${idx}`} className="animate-pulse">
+                  <td className="px-6 py-5">
+                    <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded w-28"></div>
+                  </td>
+                  <td className="px-6 py-5 space-y-2">
+                    <div className="h-3.5 bg-slate-200 dark:bg-slate-700 rounded w-36"></div>
+                    <div className="h-3 bg-slate-150 dark:bg-slate-800 rounded w-24"></div>
+                  </td>
+                  <td className="px-6 py-5">
+                    <div className="h-3.5 bg-slate-150 dark:bg-slate-800 rounded w-32"></div>
+                  </td>
+                  <td className="px-6 py-5">
+                    <div className="h-3.5 bg-slate-150 dark:bg-slate-800 rounded w-20"></div>
+                  </td>
+                  <td className="px-6 py-5">
+                    <div className="h-7 bg-slate-200 dark:bg-slate-700 rounded w-24"></div>
+                  </td>
+                </tr>
+              ))
+            ) : filteredLeads.length === 0 ? (
               <tr>
                 <td colSpan={5} className="px-6 py-12 text-center text-slate-400 italic">
                   No matching chatbot leads discovered.

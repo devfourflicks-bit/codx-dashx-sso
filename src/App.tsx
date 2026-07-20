@@ -63,6 +63,7 @@ export default function App() {
   // Collections lists
   const [products, setProducts] = useState<Product[]>([]);
   const [leads, setLeads] = useState<Lead[]>([]);
+  const [leadsLoading, setLeadsLoading] = useState<boolean>(true);
 
   // User Role & Developer Mode States
   const [currentUserRole, setCurrentUserRole] = useState<string>('Employee');
@@ -206,6 +207,7 @@ export default function App() {
   };
 
   const loadLeads = async () => {
+    setLeadsLoading(true);
     try {
       const q = await getDocs(collection(db, 'chatbot_leads'));
       const list: Lead[] = [];
@@ -217,6 +219,8 @@ export default function App() {
       setLeads(list);
     } catch (err) {
       console.error('Error loading chatbot leads inquiries:', err);
+    } finally {
+      setLeadsLoading(false);
     }
   };
 
@@ -376,7 +380,7 @@ export default function App() {
           />
         );
       case 'leads-section':
-        return <LeadsSection leads={leads} onUpdateLead={loadLeads} />;
+        return <LeadsSection leads={leads} onUpdateLead={loadLeads} isLoading={leadsLoading} />;
       case 'role-registry-section':
         return (
           <RoleRegistrySection
